@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gbox-bg1: #3c3836;
+  --color-gbox-bg0: #282828;
+
+  --color-gbox-fg: #ebdbb2;
+
+  --color-gbox-blue1: #83a598;
+}
+
+html {
+  min-height: 100vh;
+  font-family: "Nunito", sans-serif;
+  overflow-x: hidden;
+
+  background: #D5FAFF;
+  background: linear-gradient(180deg,rgba(213, 250, 255, 1) 0%, rgba(254, 240, 230, 1) 100%);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}

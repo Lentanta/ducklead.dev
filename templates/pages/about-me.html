@@ -1,0 +1,19 @@
+{{ define "about-me" }}
+<!doctype html>
+<html>
+
+{{ template "html-head" . }}
+
+<body class="py-5">
+  {{ template "header" }}
+
+  <main class="my-5 max-w-[1024px] h-[3000px] m-auto">
+    <h1>About me</h1>
+    <p>Yet another software engineer</p>
+  </main>
+
+  {{ template "footer" }}
+</body>
+
+</html>
+{{ end }}

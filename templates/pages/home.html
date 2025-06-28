@@ -1,0 +1,73 @@
+{{ define "home" }}
+<!doctype html>
+<html>
+
+{{ template "html-head" . }}
+
+<body class="py-5">
+  {{ template "header" }}
+
+  <main class="my-5 max-w-[1024px] min-h-screen m-auto">
+    {{ template "welcome-banner" }}
+
+    <section class="bg-[#FFFCFB] rounded-md shadow-md p-8 mx-4">
+      <div>
+        <h2 class="text-[#895102] text-xl font-bold">
+          💾 A Little About Myself
+        </h2>
+        <p class="text-[#895102] text-lg mt-1">
+          I’m a passionate software engineer who <b>loves building silly things</b> and exploring everything related to
+          software
+          and computer science. I also enjoy drawing, creating pixel art, making video games, and learning about
+          graphics
+          programming.
+        </p>
+
+        <p class="text-[#895102] text-lg mt-1">
+          With years of experience working in the ever-evolving JavaScript ecosystem, I’ve crafted smooth user
+          interfaces
+          with Next.js, and built reliable backends with Node.js. I enjoy solving real-world problems with
+          elegant code, thrive in fast-paced environments, and love turning ideas into working products that people
+          actually enjoy using.
+        </p>
+      </div>
+
+      <div class="mt-8">
+        <h2 class="text-[#895102] text-xl font-bold">
+          🦆 Why The Duck Lead?
+        </h2>
+        <p class="text-[#895102] text-lg mt-1">
+          I think everyone has their own goals,some want to become a CTO, others aim to be a tech lead. But for me, the
+          highest position I aspire to is becoming a duck owner.
+        </p>
+        <p class="text-[#895102] text-lg mt-1">Own a farm. Lead a flock of ducks. That’s the dream!</p>
+      </div>
+
+      <div class="mt-8">
+        <h2 class="text-[#895102] text-xl font-bold">
+          💻 Why Go and HTMX?
+        </h2>
+        <p class="text-[#895102] text-lg mt-1">
+          I’ve built my own websites using the JavaScript tech stack before, but the constant changes and complexity of
+          the JS ecosystem made me look for something simpler and more stable. I wanted a stack that’s fast,
+          straightforward, and enjoyable to work with.
+        </p>
+        <p class="text-[#895102] text-lg mt-1">That’s why I chose Go. Pairing it with HTMX lets me keep things minimal
+          while still building dynamic, responsive web apps without the heavy frontend overhead.</p>
+      </div>
+    </section>
+    <!-- <div class="bg-gray-500"> -->
+    <!--   <h1 class="m-2 text-3xl">Welcome to my website</h1> -->
+    <!--   <i class="ri-github-fill ri-2x"></i> -->
+    <!-- </div> -->
+    <!---->
+    <!-- <button hx-get="/hello" hx-swap="outerHTML"> -->
+    <!--   Click Me -->
+    <!-- </button> -->
+  </main>
+
+  {{ template "footer" }}
+</body>
+
+</html>
+{{ end }}
