@@ -25,7 +25,9 @@ func main() {
 	})
 
 	router.GET("/about-me", func(ctx *gin.Context) {
-		ctx.HTML(http.StatusOK, "about-me", nil)
+		ctx.HTML(http.StatusOK, "about-me", gin.H{
+			"Title": "About me",
+		})
 	})
 
 	router.Run(":3000")
