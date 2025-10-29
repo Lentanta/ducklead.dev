@@ -1,11 +1,149 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import PingPong from '../components/PingPong.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import BaseLayout from '../layouts/BaseLayout.astro';
+import background from '../assets/background.svg';
+import clsx from "clsx";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<BaseLayout>
+  <Header />
+
+  <div class="grid grid-cols-4 gap-4 mt-4 mx-2">
+	  <!-- My name -->
+    <div class={clsx(
+      "col-span-3 md:col-span-2", 
+      "border-2 border-gruvbox-bg1 p-2"
+    )}>
+      <p class=" font-bold text-xl text-gruvbox-aqua-light">
+        Hi, I'm Tam <span class="text-sm">(aka The Duck Lead)</span></p>
+      <p class="text-gruvbox-fg1 text-xl">Welcome to my Digital Playground</p>
+    </div>   
+
+	  <!-- Github icon -->
+    <div class={clsx(
+      "border-2 border-gruvbox-bg1 p-2"
+    )}>
+      <div class="aspect-square h-full w-full flex items-center justify-center">
+        <i class={clsx(
+          "aspect-square",
+          "text-5xl md:text-8xl",
+          "text-gruvbox-fg1 ri-github-fill"
+        )} />
+      </div>
+    </div>   
+
+	  <!-- Right creatitve Background -->
+    <div class={clsx(
+      "hidden md:block md:row-span-2",
+      "border-2 border-gruvbox-bg1 p-1"
+    )}>
+      <div class="size-full bg-[url(/images/creative-bg-1.png)] bg-center bg-size-[700px]" />
+    </div>   
+
+    <div class="border-2 border-gruvbox-bg1 p-1">
+      <div class="size-full bg-[url(/images/creative-bg-1.png)] bg-size-[800px]" />
+    </div>   
+
+    <!-- New posts -->
+    <!-- <div class="col-span-2 border-2 border-gruvbox-bg1 p-2"> -->
+    <div class={clsx(
+      " md:row-span-2",
+      "border-2 border-gruvbox-bg1 p-1"
+    )}>
+      <h2 class="text-lg text-gruvbox-blue-light">
+        A little about myself
+      </h2>
+      <p class="text-gruvbox-fg1 mt-1">
+        I’m a passionate software engineer who <b>loves building silly things</b> and exploring everything related to software
+        and computer science. I also enjoy drawing, creating pixel art, making video games, and learning about graphics programming.
+      </p>
+    </div>   
+
+    <div class="col-span-4 border-2 border-gruvbox-bg1">
+      <PingPong />
+    </div>   
+
+    <div class="col-span-2 border-2 border-gruvbox-bg1 p-1">
+      <div class="size-full bg-[url(/images/creative-bg-2.png)] bg-size-[700px]" />
+    </div>
+
+    <div class="col-span-2 border-2 border-gruvbox-bg1 p-2">
+      <div class="flex gap-2">
+        <i class="text-lg ri-palette-fill text-gruvbox-orange-light"></i>
+        <h2 class="text-lg text-gruvbox-orange-light">Gruvbox palette (My favorite)</h2>
+      </div>
+
+      <div class="mt-3">
+        <div class="grid grid-cols-2 gap-2 mt-2">
+          <p class="text-gruvbox-bg4 text-base">Background</p>
+          <p class="text-gruvbox-fg1 text-base">Foreground</p>
+
+          <div class="grid h-full grid-cols-6">
+            <div class="h-full bg-gruvbox-bg0_h" />
+            <div class="h-[50px] bg-gruvbox-bg0_s" />
+            <div class="h-[50px] bg-gruvbox-bg1" />
+            <div class="h-[50px] bg-gruvbox-bg2" />
+            <div class="h-[50px] bg-gruvbox-bg3" />
+            <div class="h-[50px] bg-gruvbox-bg4" />
+          </div>
+
+          <div class="grid grid-cols-5">
+            <div class="h-[50px] bg-gruvbox-fg0" />
+            <div class="h-[50px] bg-gruvbox-fg1" />
+            <div class="h-[50px] bg-gruvbox-fg2" />
+            <div class="h-[50px] bg-gruvbox-fg3" />
+            <div class="h-[50px] bg-gruvbox-fg4" />
+          </div>
+        </div> 
+      </div> 
+
+      <div class="grid grid-cols-7 gap-2 mt-2">
+          <div>
+            <p class="text-gruvbox-red-light">Red</p>
+            <div class="h-[50px] bg-gruvbox-red" />
+            <div class="h-[50px] bg-gruvbox-red-light" />
+          </div>
+
+          <div>
+            <p class="text-gruvbox-green-light">Green</p>
+            <div class="h-[50px] bg-gruvbox-green" />
+            <div class="h-[50px] bg-gruvbox-green-light" />
+          </div>
+
+          <div>
+            <p class="text-gruvbox-yellow-light">Yellow</p>
+            <div class="h-[50px] bg-gruvbox-yellow" />
+            <div class="h-[50px] bg-gruvbox-yellow-light" />
+          </div>
+
+          <div>
+            <p class="text-gruvbox-blue-light">Blue</p>
+            <div class="h-[50px] bg-gruvbox-blue" />
+            <div class="h-[50px] bg-gruvbox-blue-light" />
+          </div>
+
+          <div>
+            <p class="text-gruvbox-purple-light">Purple</p>
+            <div class="h-[50px] bg-gruvbox-purple" />
+            <div class="h-[50px] bg-gruvbox-purple-light" />
+          </div>
+
+          <div>
+            <p class="text-gruvbox-aqua-light">Aqua</p>
+            <div class="h-[50px] bg-gruvbox-aqua" />
+            <div class="h-[50px] bg-gruvbox-aqua-light" />
+          </div>
+
+          <div>
+            <p class="text-gruvbox-orange-light">Orange</p>
+            <div class="h-[50px] bg-gruvbox-orange" />
+            <div class="h-[50px] bg-gruvbox-orange-light" />
+          </div>
+        </div>
+      </div>
+
+    
+  </div>
+</MainLayout>
