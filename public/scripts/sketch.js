@@ -64,7 +64,8 @@ function draw() {
   clear();
 
   // Draw the paddles
-  fill("#d65d0e")
+  fill("#689d6a")
+
   rect(paddleLeftX, paddleLeftY, paddleWidth, paddleHeight);
 
   fill("#b16286")

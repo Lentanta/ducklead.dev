@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import 'remixicon/fonts/remixicon.css'
+import clsx from "clsx";
 ---
 
 <!doctype html>
@@ -20,8 +21,13 @@ import 'remixicon/fonts/remixicon.css'
     <title>Ducklead_</title>
 
 	</head>
-	<body class="bg-gruvbox-bg0">
-    <div class="max-w-[1024px] m-auto">
+
+	<body class="relative bg-gruvbox-bg0 bg-[url(/images/creative-bg-6.png)] bg-center bg-cover bg-fixed">
+    <div class="fixed inset-0 w-full h-full bg-black opacity-50 z-0"></div>
+    <div class={clsx(
+        "px-2",
+        "relative z-10 max-w-[1024px] min-h-screen m-auto bg-gruvbox-bg0"
+      )}>
       <slot />
     </div>
 
