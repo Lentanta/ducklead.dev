@@ -10,31 +10,38 @@ import clsx from "clsx";
 <BaseLayout>
   <Header />
 
-  <div class="grid grid-cols-4 gap-4 mt-4 mx-2">
+  <div class="grid grid-cols-4 gap-2">
 	  <!-- My name -->
     <div class={clsx(
-      "col-span-3 md:col-span-2", 
-      "border-2 border-gruvbox-bg1 p-2"
+      "col-span-4 md:col-span-2", 
+      "border-2 border-gruvbox-bg1 p-2",
+      "flex justify-center md:items-center"
     )}>
-      <p class=" font-bold text-xl text-gruvbox-aqua-light">
+      <div>
+        <p class="font-bold text-xl text-gruvbox-aqua-light">
         Hi, I'm Tam <span class="text-sm">(aka The Duck Lead)</span></p>
-      <p class="text-gruvbox-fg1 text-xl">Welcome to my Digital Playground</p>
+        <p class="text-gruvbox-fg1 text-xl">Welcome to my Digital Playground</p>
+      </div>
     </div>   
 
 	  <!-- Github icon -->
     <div class={clsx(
+      "col-span-2 md:col-span-1",
       "border-2 border-gruvbox-bg1 p-2"
     )}>
-      <div class="aspect-square h-full w-full flex items-center justify-center">
-        <i class={clsx(
-          "aspect-square",
-          "text-5xl md:text-8xl",
-          "text-gruvbox-fg1 ri-github-fill"
-        )} />
-      </div>
+      <a id="github-link" href="https://github.com/Lentanta" target="">
+        <div class="aspect-square h-full w-full flex flex-col items-center justify-center">
+          <i class={clsx(
+            "aspect-square",
+            "text-5xl md:text-8xl",
+            "text-gruvbox-fg1 ri-github-fill"
+          )} />
+          <p class="text-gruvbox-fg1 text-lg font-bold">Lentanta</p>
+        </div>
+      </a>
     </div>   
 
-	  <!-- Right creatitve Background -->
+	  <!-- Long creatitve Background (mobile: hidden) -->
     <div class={clsx(
       "hidden md:block md:row-span-2",
       "border-2 border-gruvbox-bg1 p-1"
@@ -42,17 +49,23 @@ import clsx from "clsx";
       <div class="size-full bg-[url(/images/creative-bg-1.png)] bg-center bg-size-[700px]" />
     </div>   
 
-    <div class="border-2 border-gruvbox-bg1 p-1">
-      <div class="size-full bg-[url(/images/creative-bg-1.png)] bg-size-[800px]" />
+    <!-- Short creatitve Background -->
+    <div class={clsx(
+      "col-span-2 md:col-span-1",
+      "border-2 border-gruvbox-bg1 p-1"
+    )}>
+      <div class={clsx(
+        "size-full bg-[url(/images/creative-bg-1.png)]",
+        "bg-size-[500px] md:bg-size-[800px]"
+      )} />
     </div>   
 
     <!-- New posts -->
-    <!-- <div class="col-span-2 border-2 border-gruvbox-bg1 p-2"> -->
     <div class={clsx(
-      " md:row-span-2",
-      "border-2 border-gruvbox-bg1 p-1"
+      "col-span-4 md:col-span-2",
+      "border-2 border-gruvbox-bg1 p-2"
     )}>
-      <h2 class="text-lg text-gruvbox-blue-light">
+      <h2 class="text-xl text-gruvbox-blue-light">
         A little about myself
       </h2>
       <p class="text-gruvbox-fg1 mt-1">
@@ -61,18 +74,18 @@ import clsx from "clsx";
       </p>
     </div>   
 
-    <div class="col-span-4 border-2 border-gruvbox-bg1">
+    <div class="relative col-span-4 border-2 border-gruvbox-bg1">
       <PingPong />
     </div>   
 
-    <div class="col-span-2 border-2 border-gruvbox-bg1 p-1">
-      <div class="size-full bg-[url(/images/creative-bg-2.png)] bg-size-[700px]" />
+    <div class="col-span-4 md:col-span-2 border-2 border-gruvbox-bg1 p-1">
+      <div class="size-full min-h-[100px] bg-[url(/images/creative-bg-2.png)] bg-size-[700px]" />
     </div>
 
-    <div class="col-span-2 border-2 border-gruvbox-bg1 p-2">
+    <div class="col-span-4 md:col-span-2 border-2 border-gruvbox-bg1 p-2">
       <div class="flex gap-2">
         <i class="text-lg ri-palette-fill text-gruvbox-orange-light"></i>
-        <h2 class="text-lg text-gruvbox-orange-light">Gruvbox palette (My favorite)</h2>
+        <h2 class="text-xl text-gruvbox-orange-light">Gruvbox palette (My favorite)</h2>
       </div>
 
       <div class="mt-3">
