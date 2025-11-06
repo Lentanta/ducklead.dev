@@ -37,3 +37,29 @@ jobs:
             ${{ secrets.DOCKERHUB_USERNAME }}/ducklead-website:${{ env.SHORT_SHA }}
             ${{ secrets.DOCKERHUB_USERNAME }}/ducklead-website:latest
 
+      # Step 5: SSH into VPS and deploy
+      - name: SSH to VPS and deploy
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          script: |
+            set -e
+
+            echo "Pulling new Docker image..."
+            docker pull ${{ secrets.DOCKERHUB_USERNAME }}/ducklead-website:latest
+
+            echo "Stopping old container if running..."
+            docker stop ducklead-website || true
+            docker rm ducklead-website || true
+
+            echo "Starting new container..."
+            docker run -d \
+              --name ducklead-website \
+              -p 3000:80 \
+              --restart always \
+              ${{ secrets.DOCKERHUB_USERNAME }}/ducklead-website:latest
+
+            echo "Deployment complete!"
+
