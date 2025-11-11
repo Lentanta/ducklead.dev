@@ -1,0 +1,19 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+// Get all file markdown files
+const posts = Object.values(import.meta.glob('./*.md', { eager: true }));
+---
+
+<BaseLayout>
+  <ul class="flex flex-col gap-7 p-2 mt-4">
+    {posts.map((post: any) => {
+      return (
+        <li>
+          <a class=`text-gruvbox-purple-light font-bold text-3xl` href={post.url}>{post.frontmatter.title}</a>
+          <p class="text-gruvbox-fg1 text-base">{post.frontmatter?.createdAt}</p>
+        </li>
+      )
+    })}
+  </ul>
+</BaseLayout>
