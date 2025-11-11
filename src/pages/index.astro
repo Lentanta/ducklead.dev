@@ -1,27 +1,32 @@
 ---
-import Header from '../components/Header.astro';
 import PingPong from '../components/PingPong.astro';
 
 import BaseLayout from '../layouts/BaseLayout.astro';
 import DeviantArtLogo from '../assets/deviantart.svg'
 
+import { Image } from 'astro:assets';
 import clsx from "clsx";
 ---
 
 <BaseLayout>
-  <Header />
-
   <div class="grid grid-cols-4 gap-2">
 	  <!-- My name -->
     <div class={clsx(
       "col-span-4 md:col-span-2", 
-      "border-2 border-gruvbox-bg1 p-2",
+      "border-2 border-gruvbox-bg1 px-2 py-4",
       "flex justify-center md:items-center"
     )}>
-      <div>
-        <p class="font-bold text-xl text-gruvbox-aqua-light">
-        Hi, I'm Tam <span class="text-sm">(aka The Duck Lead)</span></p>
-        <p class="text-gruvbox-fg1 text-xl">Welcome to my Digital Playground</p>
+      <div class="flex gap-3">
+        <Image class={clsx(
+              "min-w-[60px] min-h-[60px] max-w-[60px] max-h-[60px] p-1", 
+              "border-4 border-gruvbox-yellow rounded-full")}
+          src="/images/ducklead-round-icon.png" width={60} height={60} alt="ducklead-icon" />
+
+        <div>
+          <p class="font-bold text-xl text-gruvbox-aqua-light">
+          Hi, I'm Tam <span class="text-sm">(aka The Duck Lead)</span></p>
+          <p class="text-gruvbox-fg1 text-xl">Welcome to my Digital Playground</p>
+        </div>
       </div>
     </div>   
 
@@ -179,7 +184,5 @@ import clsx from "clsx";
           </div>
         </div>
       </div>
-
-    
   </div>
-</MainLayout>
+</BaseLayout>
