@@ -1,0 +1,188 @@
+---
+import PingPong from '../components/PingPong.astro';
+
+import BaseLayout from '../layouts/BaseLayout.astro';
+import DeviantArtLogo from '../assets/deviantart.svg'
+
+import { Image } from 'astro:assets';
+import clsx from "clsx";
+---
+
+<BaseLayout>
+  <div class="grid grid-cols-4 gap-2">
+   <!-- My name -->
+    <div class={clsx(
+      "col-span-4 md:col-span-2", 
+      "border-2 border-gruvbox-bg1 px-2 py-4",
+      "flex justify-center md:items-center"
+    )}>
+      <div class="flex gap-3">
+        <Image class={clsx(
+              "min-w-[60px] min-h-[60px] max-w-[60px] max-h-[60px] p-1", 
+              "border-4 border-gruvbox-yellow rounded-full")}
+          src="/images/ducklead-round-icon.png" width={60} height={60} alt="ducklead-icon" />
+
+        <div>
+          <p class="font-bold text-xl text-gruvbox-aqua-light">
+          Hi, I'm Tam <span class="text-sm">(aka The Duck Lead)</span></p>
+          <p class="text-gruvbox-fg1 text-xl">Welcome to my Digital Playground</p>
+        </div>
+      </div>
+    </div>   
+
+   <!-- Github icon -->
+    <div class={clsx(
+      "relative col-span-2 md:col-span-1",
+      "border-2 border-gruvbox-bg1 p-3"
+      )}>
+      <a id="github-link" href="https://github.com/Lentanta" target="_blank" 
+        class="aspect-square h-full w-full flex flex-col items-center justify-center">
+        <i class={clsx(
+          "aspect-square",
+          "text-7xl md:text-8xl",
+          "text-gruvbox-fg1 ri-github-fill"
+        )} />
+        <p class="text-gruvbox-fg1 mt-1 text-lg font-bold rounded-sm">Lentanta</p>
+      </a>
+
+      <i class="ri-arrow-right-up-fill text-gruvbox-fg4 absolute top-1 right-1"></i>
+    </div>   
+
+   <!-- Long creatitve Background (mobile: hidden) -->
+    <div class={clsx(
+      "hidden md:block md:row-span-2",
+      "border-2 border-gruvbox-bg1 p-1"
+    )}>
+      <div class="size-full bg-[url(/images/creative-bg-1.png)] bg-center bg-size-[700px]" />
+    </div>   
+
+    <!-- Deviant Art -->
+    <div class={clsx(
+      "col-span-2 md:col-span-1",
+      "relative border-2 border-gruvbox-bg1 p-1"
+    )}>
+      <a href="https://www.deviantart.com/lentanta27" target="_blank" class="flex flex-col h-full">
+        <div class={clsx( 
+          "size-full bg-[url(/images/mono-house.png)]", 
+          "bg-cover bg-center", 
+        )} /> 
+
+        <div class="flex justify-center items-center p-1 bg-gruvbox-bg2">
+          <div class="flex gap-2 items-center">
+            <DeviantArtLogo class="w-5 text-gruvbox-fg1" />
+            <p class="text-base text-gruvbox-fg1">My Art Gallery</p>
+          </div>
+        </div>
+      </a>
+
+      <i class="ri-arrow-right-up-fill text-gruvbox-fg4 absolute top-1 right-1"></i>
+    </div>   
+
+   <!-- Long creatitve Background (mobile: shown) -->
+    <div class={clsx(
+      "block md:hidden col-span-4",
+      "border-2 border-gruvbox-bg1 p-1"
+    )}>
+      <div class="size-full min-h-[100px] bg-[url(/images/creative-bg-1.png)] bg-center bg-size-[700px]" />
+    </div>   
+
+    <!-- New posts -->
+    <div class={clsx(
+      "col-span-4 md:col-span-2",
+      "border-2 border-gruvbox-bg1 p-2"
+    )}>
+      <div class="flex gap-1">
+        <i class="text-lg ri-user-4-fill text-gruvbox-blue-light"></i>
+        <h2 class="text-xl text-gruvbox-blue-light">A little about me</h2>
+      </div>
+
+      <p class="text-gruvbox-fg1 mt-1">
+        I’m a passionate software engineer who <b>loves building silly things</b> and exploring everything related to software
+        and computer science. I also enjoy drawing, creating pixel art, making video games, and learning about graphics programming.
+      </p>
+    </div>   
+
+    <div class="relative col-span-4 border-2 border-gruvbox-bg1">
+      <PingPong />
+    </div>   
+
+    <div class="col-span-4 md:col-span-3 border-2 border-gruvbox-bg1 p-1">
+      <div class="size-full min-h-[100px] bg-[url(/images/creative-bg-2.png)] bg-size-[700px]" />
+    </div>
+
+    <div class="col-span-4 md:col-span-1 border-2 border-gruvbox-bg1 p-2">
+      <div class="flex gap-1">
+        <i class="text-lg ri-palette-fill text-gruvbox-orange-light"></i>
+        <h2 class="text-xl text-gruvbox-orange-light">Gruvbox palette</h2>
+      </div>
+
+      <div class="mt-3">
+        <div class="grid grid-cols-2 gap-2 mt-2">
+          <p class="text-gruvbox-bg4 text-base">Background</p>
+          <p class="text-gruvbox-fg1 text-base">Foreground</p>
+
+          <div class="grid h-full grid-cols-6">
+            <div class="h-[32px] bg-gruvbox-bg0_h" />
+            <div class="h-[32px] bg-gruvbox-bg0_s" />
+            <div class="h-[32px] bg-gruvbox-bg1" />
+            <div class="h-[32px] bg-gruvbox-bg2" />
+            <div class="h-[32px] bg-gruvbox-bg3" />
+            <div class="h-[32px] bg-gruvbox-bg4" />
+          </div>
+
+          <div class="grid grid-cols-5">
+            <div class="h-[32px] bg-gruvbox-fg0" />
+            <div class="h-[32px] bg-gruvbox-fg1" />
+            <div class="h-[32px] bg-gruvbox-fg2" />
+            <div class="h-[32px] bg-gruvbox-fg3" />
+            <div class="h-[32px] bg-gruvbox-fg4" />
+          </div>
+        </div> 
+      </div> 
+
+      <div class="grid grid-cols-7 gap-2 mt-2">
+          <div>
+            <p class="text-gruvbox-red-light">Red</p>
+            <div class="aspect-square bg-gruvbox-red" />
+            <div class="aspect-square bg-gruvbox-red-light" />
+          </div>
+
+          <div>
+            <p class="text-gruvbox-green-light">Grn</p>
+            <div class="aspect-square bg-gruvbox-green" />
+            <div class="aspect-square bg-gruvbox-green-light" />
+          </div>
+
+          <div>
+            <p class="text-gruvbox-yellow-light">Ylw</p>
+            <div class="aspect-square bg-gruvbox-yellow" />
+            <div class="aspect-square bg-gruvbox-yellow-light" />
+          </div>
+
+          <div>
+            <p class="text-gruvbox-blue-light">Blu</p>
+            <div class="aspect-square bg-gruvbox-blue" />
+            <div class="aspect-square bg-gruvbox-blue-light" />
+          </div>
+
+          <div>
+            <p class="text-gruvbox-purple-light">Pur</p>
+            <div class="aspect-square bg-gruvbox-purple" />
+            <div class="aspect-square bg-gruvbox-purple-light" />
+          </div>
+
+          <div>
+            <p class="text-gruvbox-aqua-light">Aqu</p>
+            <div class="aspect-square bg-gruvbox-aqua" />
+            <div class="aspect-square bg-gruvbox-aqua-light" />
+          </div>
+
+          <div>
+            <p class="text-gruvbox-orange-light">Orn</p>
+            <div class="aspect-square bg-gruvbox-orange" />
+            <div class="aspect-square bg-gruvbox-orange-light" />
+          </div>
+        </div>
+      </div>
+  </div>
+</BaseLayout>

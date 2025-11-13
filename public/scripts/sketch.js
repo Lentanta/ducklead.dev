@@ -64,11 +64,11 @@ function draw() {
   clear();
 
   // Draw the paddles
-  fill("#689d6a")
+  fill("#7fbbdd")
 
   rect(paddleLeftX, paddleLeftY, paddleWidth, paddleHeight);
 
-  fill("#b16286")
+  fill("#7fbbdd")
   rect(paddleRightX, paddleRightY, paddleWidth, paddleHeight);
 
   // Draw the ball
