@@ -33,6 +33,7 @@ jobs:
           # use the current dockerfile in this repo
           context: .
           push: true
+          no-cache: true
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME }}/ducklead-website:${{ env.SHORT_SHA }}
             ${{ secrets.DOCKERHUB_USERNAME }}/ducklead-website:latest
