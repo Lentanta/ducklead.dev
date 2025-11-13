@@ -33,6 +33,10 @@
   --color-gruvbox-aqua-light: #8ec07c;
   --color-gruvbox-orange: #d65d0e;
   --color-gruvbox-orange-light: #fe8019;
+
+  --color-body: ##000000bf;
+  --color-primary: #7fbbdd;
+  --color-secondary: #c4e9f2;
 }
 
 .creative-bg-1 {
