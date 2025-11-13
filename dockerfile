@@ -1,4 +1,4 @@
-# Stage 1: Build the static site
+# Step 1: Build the static site
 FROM node:20-alpine AS builder
 
 # Enable pnpm
@@ -11,13 +11,13 @@ COPY pnpm-lock.yaml package.json ./
 RUN pnpm install --frozen-lockfile
 
 # Copy source and build
-COPY . .
-RUN pnpm run build
+COPY . /app
 
-# Stage 2: Serve static files with nginx
+# Remove old files first and then build to prevent cache
+RUN rm -rf .astro dist && pnpm run build
+
+# Step 2: Serve static files with nginx
 FROM nginx:alpine
-
-# Copy built site from builder
 COPY --from=builder /app/dist /usr/share/nginx/html
 
 EXPOSE 80
