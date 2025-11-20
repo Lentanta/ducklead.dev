@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/PostPageLayout.astro
+layout: ../../layouts/PostLayout.astro
 title: 'My all-time favourite books'
 createdAt: 'Jun 25, 2024'
 ---

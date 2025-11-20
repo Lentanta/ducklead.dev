@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PingPong from '../components/PingPong.astro';
+import ProjectShowcase from '../components/ProjectShowcase.astro';
 
 import DeviantArtLogo from '../assets/deviantart.svg'
 
@@ -43,7 +44,7 @@ import clsx from "clsx";
       </div>
     </div>
 
-    <div id="right-col" class="flex flex-col gap-2">
+    <div id="right-col" class="flex flex-col gap-3">
       <div class="bg-white shadow-md rounded-md">
          <div class="p-2">
           <div class="p-3 border-2 rounded-md border-dashed border-primary">
@@ -88,5 +89,10 @@ import clsx from "clsx";
       </div>
     </div>
   </div>  
+
+      <!-- Project showcase -->
+      <div class="bg-white shadow-md rounded-md">
+        <ProjectShowcase />
+      </div>
     <div/>
 </BaseLayout>
