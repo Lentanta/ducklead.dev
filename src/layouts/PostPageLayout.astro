@@ -1,56 +1,16 @@
 ---
-import "../styles/global.css";
-import "../styles/post.css";
-import 'remixicon/fonts/remixicon.css'
-
-import Header from '@/components/Header.astro';
-import clsx from "clsx";
-
-const {frontmatter} = Astro.props;
+import BaseLayout from './BaseLayout.astro';
+import FullPageContentLayout from './FullPageContentLayout.astro';
+const { title } = Astro.props.frontmatter;
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" 
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap">
-
-    <title>Ducklead_</title>
-	</head>
-
-	<body class="relative bg-gruvbox-bg0 bg-[url(/images/creative-bg-6.png)] bg-center bg-cover bg-fixed">
-    <div class="fixed inset-0 w-full h-full bg-black opacity-50 z-0"></div>
-    <div class={clsx(
-        "px-2",
-        "relative z-10 max-w-[1024px] min-h-screen m-auto bg-gruvbox-bg0"
-      )}>
-      <Header />
-
-      <div class="mt-8">
-        <h1 class="!text-gruvbox-purple-light text-4xl text-center font-bold">
-          {frontmatter.title} 
-        </h1>
-
-        <div class="article px-2 mt-5">
-          <slot />
-        </div>
-      </div>
-    </div>
-	</body>
-</html>
-
-<style>
-	html,
-	body {
-    font-family: "Nunito", sans-serif;
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+<BaseLayout>
+  <FullPageContentLayout>
+    <main class="mx-auto px-4 py-10 max-w-prose">
+      <article class="prose prose-neutral md:prose-xl">
+        <h1 class="text-center">{title}</h1>
+        <slot>
+      </article>
+    </main>
+  </FullPageContentLayout>
+</BaseLayout>

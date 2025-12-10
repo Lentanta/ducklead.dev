@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FullPageContentLayout from '../../layouts/FullPageContentLayout.astro';
+---
+
+<BaseLayout>
+  <FullPageContentLayout>
+    <main class="mx-auto p-4">
+      <article class="prose">
+        <h1>Devlogs</h1>
+
+        <h3>Version 0.4 (Melancholic)</h3>
+        <ul>
+          <li>Added Devlogs page</li>
+          <li>Added Tailwind typography</li>
+          <li>Added blog post page</li>
+        </ul>
+
+        <h3>Version 0.3 (Melt)</h3>
+        <ul>
+          <li>Updated Footer and Header</li>
+          <li>Containerized website with Docker and Docker compose</li>
+          <li>Updated automation deploy with Github Actions</li>
+        </ul>
+
+        <h3>Version 0.2 (DECORATOR)</h3>
+        <ul>
+          <li>Redesigned the website from scratch</li>
+          <li>Removed the Gruvbox theme and switched to a brighter theme</li>
+        </ul>
+
+        <h3>Version 0.1 (Packaged)</h3>
+        <ul>
+          <li>Initial website with Astro</li>
+          <li>Migrate content from Go to Astro</li>
+          <li>Using darktheme and Grubox pallate</li>
+          <li>Update TailwindCSS and Homepage</li>
+        </ul>
+      </article>
+    </main>
+  </FullPageContentLayout>
+</BaseLayout>
