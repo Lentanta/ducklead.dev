@@ -1,13 +1,21 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import FullPageContentLayout from '../../layouts/FullPageContentLayout.astro';
+import MainContentLayout from '../../layouts/MainContenLayout.astro';
+import DashBoxLayout from '@/layouts/DashBoxLayout.astro';
 ---
 
 <BaseLayout>
-  <FullPageContentLayout>
-    <main class="mx-auto p-4">
-      <article class="prose">
+  <MainContentLayout>
+    <DashBoxLayout>
+      <main class="mx-auto p-4">
         <h1>Devlogs</h1>
+
+        <h3>Version 0.5 (Vampire)</h3>
+        <ul>
+          <li>Updated layout from 2 to 1 column, removed some sections</li>
+          <li>Updated global typography style</li>
+          <li>Updated README file</li>
+        </ul>
 
         <h3>Version 0.4 (Melancholic)</h3>
         <ul>
@@ -36,7 +44,7 @@ import FullPageContentLayout from '../../layouts/FullPageContentLayout.astro';
           <li>Using darktheme and Grubox pallate</li>
           <li>Update TailwindCSS and Homepage</li>
         </ul>
-      </article>
-    </main>
-  </FullPageContentLayout>
+      </main>
+    </DashBoxLayout>
+  </MainContentLayout>
 </BaseLayout>

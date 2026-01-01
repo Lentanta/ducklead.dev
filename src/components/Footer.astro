@@ -1,7 +1,29 @@
+---
+import DeviantArtLogo from '../assets/deviantart.svg'
+import clsx from "clsx";
+---
+
 <footer class="mt-[100px]">
+  <div class="flex gap-2 justify-center">
+    <a id="github-link" href="https://www.github.com/Lentanta" target="_blank" 
+      class={clsx("rounded-md block h-10 w-10 bg-secondary/40", "flex items-center justify-center")}>
+        <i class={clsx("text-3xl","ri-github-fill text-primary")} />
+    </a>
+
+    <a id="linkedin-link" href="https://www.linkedin.com/in/thanh-t%C3%A2m-l%C3%AA-b95878193/" target="_blank" 
+      class={clsx("rounded-md block h-10 w-10 bg-secondary/40", "flex items-center justify-center")}>
+        <i class={clsx("text-3xl","ri-linkedin-box-fill text-primary")} />
+    </a>
+
+    <a id="deviant-art-link" href="https://www.deviantart.com/lentanta27" target="_blank" 
+      class={clsx("rounded-md block h-10 w-10 bg-secondary/40", "flex items-center justify-center")}>
+        <DeviantArtLogo class="w-6 h-6 text-primary" />
+    </a>
+  </div>
+
   <div class="py-5">
-    <p class="text-body text-center">© 2025 Lentanta. All Rights Reserved.</p>
-    <p class="text-body text-center">Made with 💙 and powered by Astro</p>
+    <p class="text-center my-0">© 2025 Lentanta. All Rights Reserved.</p>
+    <p class="text-center my-0">Made with 💙 and powered by Astro</p>
     <a class="underline" href="/devlogs">
       <p class="text-body text-sm text-center mt-1">Version 0.4 (Melancholic)</p>
     </a>

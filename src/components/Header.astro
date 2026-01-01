@@ -1,16 +1,23 @@
+---
+import { Picture } from 'astro:assets';
+import DuckIcon from "../assets/images/ducklead-icon.png";
+---
+
 <div class="w-full lg:h-[800px] h-[400px] bg-[url(/images/sky-clouds.jpg)] bg-center bg-cover">
 
-  <nav class="sticky top-0">
+  <nav>
     <div class="max-w-[1024px] m-auto">
       <div class="md:py-3 p-2">
 
         <!-- Navigation bar -->
         <div class="p-3 flex items-center justify-between bg-white backdrop-blur-md rounded-lg shadow px-4">
-          <div class="flex gap-1 rounded-md py-1">
-            <a href="/">
-              <h1 class="text-2xl text-primary font-bold">ducklead_</h1>
+
+            <a href="/" class="hover:opacity-70">
+              <div class="flex gap-2 items-center py-1">
+                <Picture class="rounded-full" src={DuckIcon} width={32} alt="ducklead-icon" />
+                <h3 class="my-0 text-primary font-bold">ducklead_</h3>
+              </div>
             </a>
-          </div>
 
           <div class="flex gap-3">
             <a class="text-lg text-body/70" href="/posts">Posts</a>
