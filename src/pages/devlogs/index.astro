@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import MainContentLayout from '../../layouts/MainContenLayout.astro';
 import DashBoxLayout from '@/layouts/DashBoxLayout.astro';
+import updateNotes from "src/update-notes.json";
 ---
 
 <BaseLayout>
@@ -10,40 +11,14 @@ import DashBoxLayout from '@/layouts/DashBoxLayout.astro';
       <main class="mx-auto p-4">
         <h1>Devlogs</h1>
 
-        <h3>Version 0.5 (Vampire)</h3>
-        <ul>
-          <li>Updated layout from 2 to 1 column, removed some sections</li>
-          <li>Updated global typography style</li>
-          <li>Updated README file</li>
-        </ul>
-
-        <h3>Version 0.4 (Melancholic)</h3>
-        <ul>
-          <li>Added Devlogs page</li>
-          <li>Added Tailwind typography</li>
-          <li>Added blog post page</li>
-        </ul>
-
-        <h3>Version 0.3 (Melt)</h3>
-        <ul>
-          <li>Updated Footer and Header</li>
-          <li>Containerized website with Docker and Docker compose</li>
-          <li>Updated automation deploy with Github Actions</li>
-        </ul>
-
-        <h3>Version 0.2 (DECORATOR)</h3>
-        <ul>
-          <li>Redesigned the website from scratch</li>
-          <li>Removed the Gruvbox theme and switched to a brighter theme</li>
-        </ul>
-
-        <h3>Version 0.1 (Packaged)</h3>
-        <ul>
-          <li>Initial website with Astro</li>
-          <li>Migrate content from Go to Astro</li>
-          <li>Using darktheme and Grubox pallate</li>
-          <li>Update TailwindCSS and Homepage</li>
-        </ul>
+        {updateNotes.map((data) => (
+          <h3>Version {data.versionNo} ({data.name})</h3>
+          <ul>
+            {data.changes.map((change) => (
+              <li>{change}</li>
+            ))}
+          </ul>
+        ))}
       </main>
     </DashBoxLayout>
   </MainContentLayout>

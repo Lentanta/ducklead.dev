@@ -1,6 +1,9 @@
 ---
+import updateNotes from "src/update-notes.json";
 import DeviantArtLogo from '../assets/deviantart.svg'
 import clsx from "clsx";
+
+const latestVersion = updateNotes[0];
 ---
 
 <footer class="mt-[100px]">
@@ -25,7 +28,7 @@ import clsx from "clsx";
     <p class="text-center my-0">© 2025 Lentanta. All Rights Reserved.</p>
     <p class="text-center my-0">Made with 💙 and powered by Astro</p>
     <a class="underline" href="/devlogs">
-      <p class="text-body text-sm text-center mt-1">Version 0.4 (Melancholic)</p>
+      <p class="text-body text-sm text-center mt-1">Version {latestVersion.versionNo} ({latestVersion.name})</p>
     </a>
   </div>
 </footer>

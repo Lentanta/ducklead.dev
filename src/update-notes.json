@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Vampire",
+    "versionNo": 0.5,
+    "changes": [
+      "Updated layout from 2 to 1 column, removed some sections",
+      "Updated global typography style",
+      "Updated README file"
+    ]
+  },
+  {
+    "name": "Melancholic",
+    "versionNo": 0.4,
+    "changes": [
+      "Added Devlogs page",
+      "Added Tailwind typography",
+      "Added blog post page"
+    ]
+  },
+  {
+    "name": "Melt",
+    "versionNo": 0.3,
+    "changes": [
+      "Updated Footer and Header",
+      "Containerized website with Docker and Docker compose",
+      "Updated automation deploy with Github Actions"
+    ]
+  },
+  {
+    "name": "DECORATOR",
+    "versionNo": 0.2,
+    "changes": [
+      "Redesigned the website from scratch",
+      "Removed the Gruvbox theme and switched to a brighter theme"
+    ]
+  },
+  {
+    "name": "Packaged",
+    "versionNo": 0.1,
+    "changes": [
+      "Initial website with Astro",
+      "Migrate content from Go to Astro",
+      "Using darktheme and Grubox pallate",
+      "Update TailwindCSS and Homepage"
+    ]
+  }
+]
