@@ -2,63 +2,48 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PingPong from '../components/PingPong.astro';
 
-import DeviantArtLogo from '../assets/deviantart.svg'
-
-import { Picture } from 'astro:assets';
-import DuckIcon from "../assets/images/ducklead-icon.png";
 import clsx from "clsx";
 ---
 
 <BaseLayout>
-  <div class={clsx(
+  <main class={clsx(
     "grid grid-cols-1 gap-5", 
-    "w-full max-w-[1024px] mx-auto -mt-12 px-3")}>
+    "w-full max-w-[1024px] mx-auto px-3")}>
 
-    <!-- Right column content -->
-    <div id="right-col" class="flex flex-col gap-2">
-      <div class="bg-white shadow-md rounded-md">
-         <div class="p-2">
-          <div class="p-3 border-2 rounded-md border-dashed border-primary">
+    <div class="m-1">
+      <h1 class="mb-0">Hello, I'm Tâm!</h1>
+      <p class="text-lg">Welcome to my digital playground</p>
+      <p class="text-lg">I’m a passionate software engineer who <b>loves building silly things</b> and exploring everything related to software and computer science. 
+      I also enjoy drawing, creating pixel art, making video games, and learning about graphics programming.</p>
+      <p class="text-body text-lg">With years of experience as a full-stack developer, I enjoy solving real-world problems with elegant code. I thrive in fast-paced environments and love turning ideas into working products that people actually enjoy using.
+      </p>
 
-          <div class="flex gap-2 items-center justify-center">
-            <div class="w-[16px] h-[16px] bg-primary rounded-md" />
-            <h2 class="my-0 text-xl md:text-2xl text-body font-bold">Hi there! My name is Tam</h2>
-            <div class="w-[16px] h-[16px] bg-primary rounded-md" />
-          </div>
-
-          <p class="text-center text-body/80"> Welcome to my digital playground</p>
-
-            <div class="mt-5">
-              <p class="text-body text-lg">I’m a passionate software engineer who <b>loves building silly things</b> and exploring everything related to software and computer science. 
-              I also enjoy drawing, creating pixel art, making video games, and learning about graphics programming.</p>
-            </div>
-
-            <div class="rounded-md mt-5 py-1">
-              <PingPong />
-            </div>
-
-            <div class="mt-5">
-              <p class="text-body text-lg">With years of experience as a Web Developer, I enjoy solving real-world problems with elegant code. I thrive
-                  in fast-paced environments and love turning ideas into working products that people
-                  actually enjoy using.
-              </p>
-            <div class="mt-5">
-
-
-          <div class="mt-5">
-            <h2 class="text-body text-xl font-bold">
-              Why The Duck Lead?
-            </h2>
-            <p class="text-body text-base mt-1">
-              I think everyone has their own goals, some want to become a CEO, others aim to be a leader.
-              But for me, the highest position I aspire to is becoming a duck owner.
-            </p>
-            <p class="text-body text-base mt-1 font-bold">Own a farm. Lead a flock of ducks. That’s the dream!</p>
-            </div>
-          </div>
-          </div>
-      </div>
+      <div class="mt-2">
+        <h2 class="text-xl font-bold">
+          Why The Duck Lead?
+        </h2>
+        <p class="text-base">
+          I think everyone has their own goals.For me, the highest position I aspire to is becoming a duck owner.
+          <span class="text-base font-bold">Own a farm. Lead a flock of ducks. That’s the dream!</span>
+        </p>
     </div>
-    </div>  
-  <div/>
+    </div>
+  </main>
+    <!-- Pixel paper section -->
+    <!-- <div class="paper-bg"> -->
+    <!--   <div class="p-3 pixel-code"> -->
+    <!--     <p class="mb-1 text-xl">Tam Le <b>{'<Lv.28>'}</b></p> -->
+    <!--     <p class=""> {'Nickname: Weekender Boy (M)'}</p> -->
+    <!---->
+    <!--     <p class="mb-1"> {'Class: Software Engineer'}</p> -->
+    <!--     <p class="">Expirence: 6y+</p> -->
+    <!---->
+    <!--     <p class="mb-1 text-lg">Skills:</p> -->
+    <!--     <ul> -->
+    <!--       <li class="mb-1"><b>Front-end:</b> React/Next, Astro</li> -->
+    <!--       <li class="mb-1"><b>Back-end:</b> NodeJS, Nest, Go</li> -->
+    <!--       <li class="mb-1"><b>Devops:</b> AWS, Docker</li> -->
+    <!--     </ul> -->
+    <!--   </div> -->
+    <!-- </div> -->
 </BaseLayout>

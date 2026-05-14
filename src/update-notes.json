@@ -1,7 +1,17 @@
 [
   {
+    "name": "Metamo RE:BORN",
+    "versionNo": "0.9",
+    "changes": [
+      "Update color palette to Paperback 2",
+      "Remove Tailwind prose for posts",
+      "Minimize the website UI",
+      "Prepare for v1.0"
+    ]
+  },
+  {
     "name": "Vampire",
-    "versionNo": 0.5,
+    "versionNo": "0.5",
     "changes": [
       "Updated layout from 2 to 1 column, removed some sections",
       "Updated global typography style",
@@ -10,7 +20,7 @@
   },
   {
     "name": "Melancholic",
-    "versionNo": 0.4,
+    "versionNo": "0.4",
     "changes": [
       "Added Devlogs page",
       "Added Tailwind typography",
@@ -19,7 +29,7 @@
   },
   {
     "name": "Melt",
-    "versionNo": 0.3,
+    "versionNo": "0.3",
     "changes": [
       "Updated Footer and Header",
       "Containerized website with Docker and Docker compose",
@@ -28,7 +38,7 @@
   },
   {
     "name": "DECORATOR",
-    "versionNo": 0.2,
+    "versionNo": "0.2",
     "changes": [
       "Redesigned the website from scratch",
       "Removed the Gruvbox theme and switched to a brighter theme"
@@ -36,7 +46,7 @@
   },
   {
     "name": "Packaged",
-    "versionNo": 0.1,
+    "versionNo": "0.1",
     "changes": [
       "Initial website with Astro",
       "Migrate content from Go to Astro",
