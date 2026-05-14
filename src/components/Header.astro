@@ -1,30 +1,28 @@
 ---
-import { Picture } from 'astro:assets';
-import DuckIcon from "../assets/images/ducklead-icon.png";
+import { Image } from 'astro:assets';
+import Logo from "src/assets/images/ducklead_logo.png";
 ---
 
-<div class="w-full lg:h-[800px] h-[400px] bg-[url(/images/sky-clouds.jpg)] bg-center bg-cover">
-
-  <nav>
-    <div class="max-w-[1024px] m-auto">
-      <div class="md:py-3 p-2">
-
-        <!-- Navigation bar -->
-        <div class="p-3 flex items-center justify-between bg-white backdrop-blur-md rounded-lg shadow px-4">
-
-            <a href="/" class="hover:opacity-70">
-              <div class="flex gap-2 items-center py-1">
-                <Picture class="rounded-full" src={DuckIcon} width={32} alt="ducklead-icon" />
-                <h3 class="my-0 text-primary font-bold">ducklead_</h3>
-              </div>
-            </a>
-
-          <div class="flex gap-3">
-            <a class="text-lg text-body/70" href="/posts">Posts</a>
-          </div>
+<nav class="text-dark">
+  <div class="max-w-[1024px] m-auto">
+    <div class="md:py-3">
+      <!-- Navigation bar -->
+      <div class="p-5 bg-light rounded-lg px-4">
+        <div class="flex items-center justify-center gap-3">
+          <div class="text-dark h-1 w-full bg-dark"></div>
+          <a href="/" class="hover:opacity-70 w-fit">
+            <Image src={Logo} alt="ducklead_ logo" class="min-w-[300px]" />
+          </a>
+          <div class="text-dark h-1 w-full bg-dark"></div>
         </div>
 
+        <div class="flex items-center justify-center gap-2 mt-3">
+          <a href="/posts" class="text-dark font-bold text-lg w-fit">Posts</a>
+          <div>-</div>
+          <a href="/" class="text-dark font-bold text-lg w-fit">About me</a>
+        </div>
       </div>
+
     </div>
-  </nav>
-</div>
+  </div>
+</nav>

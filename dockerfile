@@ -1,9 +1,8 @@
 # Step 1: Build the static site
 FROM node:20-alpine AS builder
 
-# Enable pnpm
+# Enable corepack
 RUN corepack enable
-
 WORKDIR /app
 
 # Copy and install deps

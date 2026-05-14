@@ -1,25 +1,21 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import MainContentLayout from '../../layouts/MainContenLayout.astro';
-import DashBoxLayout from '@/layouts/DashBoxLayout.astro';
 import updateNotes from "src/update-notes.json";
 ---
 
 <BaseLayout>
   <MainContentLayout>
-    <DashBoxLayout>
-      <main class="mx-auto p-4">
-        <h1>Devlogs</h1>
-
-        {updateNotes.map((data) => (
-          <h3>Version {data.versionNo} ({data.name})</h3>
-          <ul>
-            {data.changes.map((change) => (
-              <li>{change}</li>
-            ))}
-          </ul>
-        ))}
-      </main>
-    </DashBoxLayout>
+    <h1>Devlogs</h1>
+    {updateNotes.map((data) => (
+      <div class="mt-10">
+        <h3>v{data.versionNo} ({data.name})</h3>
+        <ul>
+          {data.changes.map((change) => (
+            <li>{change}</li>
+          ))}
+        </ul>
+      </div>
+    ))}
   </MainContentLayout>
 </BaseLayout>

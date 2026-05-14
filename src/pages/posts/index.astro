@@ -1,25 +1,24 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import FullPageContentLayout from '../../layouts/FullPageContentLayout.astro';
+import MainContentLayout from '../../layouts/MainContenLayout.astro';
 
 // Get all file markdown files
 const posts = Object.values(import.meta.glob('./*.md', { eager: true }));
 ---
 
 <BaseLayout>
-  <FullPageContentLayout>
-    <main class="mx-auto p-4">
-      <h1 class="text-body text-2xl">Posts</h1>
-      <ul class="flex flex-col gap-7 p-2 mt-4">
-        {posts.map((post: any) => {
-          return (
-            <li>
-              <a class=`text-body text-xl underline` href={post.url}>{post.frontmatter.title}</a>
-              <p class="text-body text-sm">{post.frontmatter?.createdAt}</p>
-            </li>
-          )
-        })}
-      </ul>
-    </main>
-  </FullPageContentLayout>
+  <MainContentLayout>
+    <h1 class="text-body text-2xl">My posts</h1>
+    <ul class="flex flex-col gap-7 p-2 mt-4">
+      {posts.map((post: any) => {
+        return (
+          <li>
+            <a class=`text-body text-xl underline` href={post.url}>{post.frontmatter.title}</a>
+            <p class="text-body text-sm">{post.frontmatter?.createdAt}</p>
+          </li>
+        )
+      })}
+    </ul>
+  </MainContentLayout>
 </BaseLayout>

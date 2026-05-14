@@ -2,74 +2,43 @@
 @plugin '@tailwindcss/typography';
 
 @theme {
-  /* Backgrounds */
-  --color-gruvbox-bg0_h: #1d2021;
-  --color-gruvbox-bg0: #282828;
-  --color-gruvbox-bg0_s: #32302f;
-  --color-gruvbox-bg1: #3c3836;
-  --color-gruvbox-bg2: #504945;
-  --color-gruvbox-bg3: #665c54;
-  --color-gruvbox-bg4: #7c6f64;
-
-  /* Foregrounds */
-  --color-gruvbox-fg0: #fbf1c7;
-  --color-gruvbox-fg1: #ebdbb2;
-  --color-gruvbox-fg2: #d5c4a1;
-  --color-gruvbox-fg3: #bdae93;
-  --color-gruvbox-fg4: #a89984;
-
-  /* Colors */
-  --color-gruvbox-gray: #928374;
-  --color-gruvbox-red: #cc241d;
-  --color-gruvbox-red-light: #fb4934;
-  --color-gruvbox-green: #98971a;
-  --color-gruvbox-green-light: #b8bb26;
-  --color-gruvbox-yellow: #d79921;
-  --color-gruvbox-yellow-light: #fabd2f;
-  --color-gruvbox-blue: #458588;
-  --color-gruvbox-blue-light: #83a598;
-  --color-gruvbox-purple: #b16286;
-  --color-gruvbox-purple-light: #d3869b;
-  --color-gruvbox-aqua: #689d6a;
-  --color-gruvbox-aqua-light: #8ec07c;
-  --color-gruvbox-orange: #d65d0e;
-  --color-gruvbox-orange-light: #fe8019;
-
-  /* Blue theme */
-  --color-body: ##000000bf;
-  --color-primary: #7fbbdd;
-  --color-secondary: #c4e9f2;
+  /* Paperback 2 palette*/
+  --color-light: #b8c2b9;
+  --color-dark: #382b26;
 }
 
 @layer base {
   /* Body defaults */
   body {
-    @apply text-base text-gray-800 leading-relaxed;
+    @apply text-base text-light leading-relaxed;
+    @apply m-0 w-full h-full;
+    @apply bg-dark;
+    font-family: "Nunito", sans-serif;
   }
 
   /* Headings */
   h1 {
-    @apply text-4xl font-bold text-gray-900 mb-4 mt-8;
+    @apply text-4xl font-bold mb-4 mt-8;
   }
 
   h2 {
-    @apply text-3xl font-bold text-gray-900 mb-3 mt-6;
+    @apply text-3xl font-bold mb-3 mt-6;
   }
 
   h3 {
-    @apply text-2xl font-semibold text-gray-800 mb-3 mt-5;
+    @apply text-2xl font-semibold mb-3 mt-5;
   }
 
   h4 {
-    @apply text-xl font-semibold text-gray-800 mb-2 mt-4;
+    @apply text-xl font-semibold mb-2 mt-4;
   }
 
   h5 {
-    @apply text-lg font-semibold text-gray-700 mb-2 mt-3;
+    @apply text-lg font-semibold mb-2 mt-3;
   }
 
   h6 {
-    @apply text-base font-semibold text-gray-700 mb-2 mt-3;
+    @apply text-base font-semibold mb-2 mt-3;
   }
 
   /* Paragraphs */
@@ -79,7 +48,8 @@
 
   /* Links */
   a {
-    @apply text-[var(--color-primary)] hover:text-[var(--color-secondary)] transition-colors duration-200;
+    @apply hover:opacity-50 hover:underline;
+    @apply transition-opacity duration-200;
   }
 
   /* Lists */
@@ -122,11 +92,6 @@
     @apply my-8 border-gray-300;
   }
 
-  /* Images */
-  img {
-    @apply max-w-full h-auto rounded-lg;
-  }
-
   /* Tables */
   table {
     @apply w-full mb-4 border-collapse;
@@ -139,4 +104,28 @@
   td {
     @apply p-3 border border-gray-300;
   }
+}
+
+@font-face {
+  font-family: 'Pixel Code';
+  src: url('./fonts/PixelCode.woff2');
+}
+
+.pixel-code {
+  font-family: "Pixel Code";
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.pixelify-sans-regular {
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.paper-bg {
+  border-image: url('./images/paper-9s-ui.png') 3 3 4 3 fill / 3px 3px 4px 3px;
+  padding: 3px 3px 4px 3px;
 }
